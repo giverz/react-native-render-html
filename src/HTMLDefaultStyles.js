@@ -1,3 +1,5 @@
+import { readingFontBold, readingFontItalic } from "../../../src/util/style/reusableStylesheets";
+
 const BASE_FONT_SIZE = 14;
 
 export function generateDefaultBlockStyles (baseFontSize = BASE_FONT_SIZE) {
@@ -26,11 +28,11 @@ export function generateDefaultBlockStyles (baseFontSize = BASE_FONT_SIZE) {
 export function generateDefaultTextStyles (baseFontSize = BASE_FONT_SIZE) {
     return {
         u: { textDecorationLine: 'underline' },
-        em: { fontStyle: 'italic' },
-        i: { fontStyle: 'italic' },
-        b: { fontWeight: 'bold' },
+        em: { fontStyle: "normal", fontFamily: readingFontItalic },
+        i: { fontStyle: "normal", fontFamily: readingFontItalic },
+        b: { fontWeight: "normal", fontFamily: readingFontBold },
         s: { textDecorationLine: 'line-through' },
-        strong: { fontWeight: 'bold' },
+        strong: { fontWeight: "normal", fontFamily: readingFontBold },
         big: { fontSize: baseFontSize * 1.2 },
         small: { fontSize: baseFontSize * 0.8 },
         a: {
